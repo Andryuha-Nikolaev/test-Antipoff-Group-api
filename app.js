@@ -30,7 +30,7 @@ app.use(requestLogger);
 // });
 
 app.post(
-  '/signin',
+  '/api/signin',
   celebrate({
     body: Joi.object().keys({
       email: Joi.string()
@@ -42,7 +42,7 @@ app.post(
   login,
 );
 app.post(
-  '/signup',
+  '/api/signup',
   celebrate({
     body: Joi.object().keys({
       name: Joi.string().min(2).max(30),
